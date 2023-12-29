@@ -99,6 +99,8 @@ for i,j in zip(algo,algo_name):
   print(j)
   print("Accuarcy Score: ",accuracy_score(y_test,y_pred)*100,'%')
   print('++' *20)
+"""***Confusion Matrix***"""
+from sklearn.metrics import confusion_matrix,classification_report
 
 sns.heatmap(cm,
             annot=True,
@@ -110,7 +112,6 @@ plt.xlabel('Actual',fontsize=13)
 plt.title('Confusion Matrix',fontsize=17)
 plt.show()
 
-from sklearn.metrics import confusion_matrix,classification_report
-
+"""***Classification Report***"""
 cm = confusion_matrix(y_test,y_pred)
 print(classification_report(y_test,y_pred))
